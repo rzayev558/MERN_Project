@@ -9,4 +9,7 @@ app.get("/api/users", (req, res) => {
   res.status(200).json({ message: "Welcome to the support" });
 });
 
+//Routes
+app.use("/api/users", require("./routes/userRoutes"));
+
 app.listen(PORT, () => console.log(`Server Started on port ${PORT}`));
